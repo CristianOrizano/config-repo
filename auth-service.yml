@@ -1,1 +1,9 @@
+server:
+  port: 8091
 
+spring:
+  application:
+    name: auth
+app:
+  jwt-expiration-milliseconds: 36000000
+  jwt-secret: kbNkRsLhHBmm78G1yu73Tyo4xv+UrcclXC174MDiqvsT73NqwF6aKAlbcdubCTv1sAqh5QnLMmU
