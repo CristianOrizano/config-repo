@@ -7,3 +7,12 @@ spring:
 app:
   jwt-expiration-milliseconds: 36000000
   jwt-secret: kbNkRsLhHBmm78G1yu73Tyo4xv+UrcclXC174MDiqvsT73NqwF6aKAlbcdubCTv1sAqh5QnLMmU
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
