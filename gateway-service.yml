@@ -1,1 +1,26 @@
+server:
+  port: 8080
 
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        # Ruta para el microservicio HOTELES
+        - id: hotel-service
+          uri: lb://HOTELES
+          predicates:
+            - Path=/api/hotel/**
+        # Ruta para el microservicio RESERVAS
+        - id: reserva-service
+          uri: lb://RESERVAS
+          predicates:
+            - Path=/api/reserva/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
