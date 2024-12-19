@@ -15,12 +15,6 @@ spring:
           uri: lb://HOTELES
           predicates:
             - Path=/api/hotel/**
-        # Ruta para el microservicio RESERVAS
-        - id: reserva-service
-          uri: lb://RESERVAS
-          predicates:
-            - Path=/api/reserva/**
-
 eureka:
   client:
     register-with-eureka: true
