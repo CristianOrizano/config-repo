@@ -14,7 +14,7 @@ spring:
         - id: hotel-service
           uri: lb://HOTELES
           predicates:
-            - Path=/api/hotel/**
+            - Path=/api/habitacion/**
 eureka:
   client:
     register-with-eureka: true
