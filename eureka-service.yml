@@ -9,6 +9,7 @@ eureka:
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enable-self-preservation: false
+    eviction-interval-timer-in-ms: 15000  # Limpia cada 15 segundos
 
 spring:
   application:
