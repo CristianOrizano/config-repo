@@ -11,9 +11,5 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     
-    lease-renewal-interval-in-seconds: 10  # Intervalo en segundos para renovar el arrendamiento de la instancia
-    lease-expiration-duration-in-seconds: 30  # Máximo tiempo sin renovar antes de ser eliminado.
-    lease-expiration-enabled: true          # Habilitar expiración de arrendamiento para eliminar instancias inactivas
-   
     service-url:
       defaultZone: http://localhost:8761/eureka/
