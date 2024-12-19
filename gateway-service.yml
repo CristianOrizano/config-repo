@@ -6,6 +6,9 @@ spring:
     name: gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         # Ruta para el microservicio HOTELES
         - id: hotel-service
