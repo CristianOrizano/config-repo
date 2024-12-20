@@ -18,7 +18,7 @@ spring:
         - id: auth-service
           uri: lb://AUTH
           predicates:
-            - Path=/api/usuario/**
+            - Path=/api/usuario/**,/api/login/**
            
         - id: reservas-service
           uri: lb://RESERVAS
