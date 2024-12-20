@@ -15,11 +15,12 @@ spring:
           uri: lb://HOTELES
           predicates:
             - Path=/api/habitacion/**
+        # Ruta para el microservicio AUHT
         - id: auth-service
           uri: lb://AUTH
           predicates:
             - Path=/api/usuario/**,/api/login/**
-           
+        # Ruta para el microservicio RESERVAS
         - id: reservas-service
           uri: lb://RESERVAS
           predicates:
