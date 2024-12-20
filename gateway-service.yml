@@ -15,6 +15,15 @@ spring:
           uri: lb://HOTELES
           predicates:
             - Path=/api/habitacion/**
+        - id: auth-service
+          uri: lb://AUTH
+          predicates:
+            - Path=/api/usuario/**
+            - Path=/api/login/**
+        - id: reservas-service
+          uri: lb://RESERVAS
+          predicates:
+            - Path=/api/reservacion/**
 eureka:
   client:
     register-with-eureka: true
