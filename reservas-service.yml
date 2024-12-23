@@ -55,8 +55,3 @@ resilience4j:
         failureRateThreshold: 60
         ignoreExceptions:
           - com.reservas.shared.exeption.ResourceNotFoundException
-
-logging:
-  level:
-    io.github.resilience4j.circuitbreaker: DEBUG
-    
