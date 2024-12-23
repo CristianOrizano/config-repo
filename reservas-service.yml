@@ -35,6 +35,8 @@ resilience4j:
         minimumNumberOfCalls: 5
         waitDurationInOpenState: 10s
         failureRateThreshold: 60
+        ignoreExceptions:
+          - com.reservas.shared.exeption.ResourceNotFoundException
 
 logging:
   level:
