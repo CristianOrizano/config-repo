@@ -18,10 +18,6 @@ management:
   health:
     circuitbreakers:
       enabled: true  # Activa la visualización del estado de los Circuit Breakers
-  endpoints:
-    web:
-      exposure:
-        include: *  # Exponer todos los endpoints de Actuator
   endpoint:
     health:
       show-details: always
