@@ -28,7 +28,6 @@ management:
     ratelimiters:
       enabled: true
 
-      
 resilience4j:
   circuitbreaker:
     configs:
@@ -61,5 +60,3 @@ logging:
   level:
     io.github.resilience4j.circuitbreaker: DEBUG
     
-
-
