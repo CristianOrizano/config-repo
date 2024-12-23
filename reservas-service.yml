@@ -24,6 +24,9 @@ management:
         
 resilience4j:
   circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
     instances:
       usuarioClient:
         registerHealthIndicator: true
