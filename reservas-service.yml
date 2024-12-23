@@ -17,11 +17,11 @@ eureka:
 management:
   health:
     circuitbreakers:
-      enabled: true  # Activa la visualización del estado de los Circuit Breakers
+      enabled: true
   endpoint:
     web:
       exposure:
-        include: *  # Exponer todos los endpoints de Actuator
+        include: *
   endpoint:
     health:
       show-details: always
