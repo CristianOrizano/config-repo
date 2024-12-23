@@ -18,6 +18,10 @@ management:
     web:
       exposure:
         include: *
+  health:
+    circuitbreakers:
+      enabled: true 
+        
 resilience4j:
   circuitbreaker:
     instances:
