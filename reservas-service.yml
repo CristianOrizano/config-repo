@@ -19,10 +19,6 @@ management:
     circuitbreakers:
       enabled: true
   endpoint:
-    web:
-      exposure:
-        include: *
-  endpoint:
     health:
       show-details: always
       
