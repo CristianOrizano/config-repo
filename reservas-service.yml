@@ -17,10 +17,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health", "info", "circuitbreakers" 
+        include: "health", "info", "circuitbreakers"
   health:
     circuitbreakers:
-      enabled: true 
+      enabled: true
         
 resilience4j:
   circuitbreaker:
