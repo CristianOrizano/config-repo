@@ -32,6 +32,7 @@ resilience4j:
   circuitbreaker:
     configs:
       default:
+        registerHealthIndicator: true
         slidingWindowType: TIME_BASED
         slidingWindowSize: 10
         permittedNumberOfCallsInHalfOpenState: 3
