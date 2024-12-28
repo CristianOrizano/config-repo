@@ -33,21 +33,20 @@ resilience4j:
     configs:
       default:
         registerHealthIndicator: true
-    instances:
-      usuarioClient:
-        registerHealthIndicator: true
+        slidingWindowType: TIME_BASED
         slidingWindowSize: 10
         permittedNumberOfCallsInHalfOpenState: 3
-        slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 4
-        waitDurationInOpenState: 5s
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 10s
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
+    instances:
+      usuarioClient:
+        slidingWindowSize: 10
+        waitDurationInOpenState: 5s
       habitacionClient:
-        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
         slidingWindowSize: 15
         permittedNumberOfCallsInHalfOpenState: 5
-        slidingWindowType: COUNT_BASED
-        minimumNumberOfCalls: 5
         waitDurationInOpenState: 10s
         failureRateThreshold: 60
