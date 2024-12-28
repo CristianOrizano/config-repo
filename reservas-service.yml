@@ -43,8 +43,6 @@ resilience4j:
         waitDurationInOpenState: 5s
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
-        ignoreExceptions:
-          - feign.FeignException$NotFound
       habitacionClient:
         registerHealthIndicator: true
         slidingWindowSize: 15
@@ -53,5 +51,3 @@ resilience4j:
         minimumNumberOfCalls: 5
         waitDurationInOpenState: 10s
         failureRateThreshold: 60
-        ignoreExceptions:
-          - com.reservas.shared.exeption.ResourceNotFoundException
